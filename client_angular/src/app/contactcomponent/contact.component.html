@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <alert></alert>
+      <form #contactform = "ngForm">
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Name</label>
+          <div class="col-10">
+            <input class="form-control" required type="text" value="" name = "name" [(ngModel)]= "contact.name" >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Address</label>
+          <div class="col-10">
+            <input class="form-control" required type="text" value="" name = "address" [(ngModel)]= "contact.address">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Email</label>
+          <div class="col-10">
+            <input class="form-control" email required type="email" value="" name = "email" [(ngModel)]= "contact.email">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Phone Number</label>
+          <div class="col-10">
+            <input class="form-control" required type="tel" value="" name = "phone_number" [(ngModel)]= "contact.phone_number">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Subject</label>
+          <div class="col-10">
+            <input class="form-control" required type="text" value="" name = "subject" [(ngModel)]= "contact.subject">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Message</label>
+          <div class="col-10">
+            <textarea class="form-control" required name = "message" [(ngModel)]= "contact.message" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-10">
+            <button type="button" class="btn btn-primary" [disabled]="!contactform.valid" (click)="onSubmit()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
