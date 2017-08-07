@@ -1,0 +1,16 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.col-md-4{
+    width: 33%;
+    float: left;
+}
+.col-md-6{
+    width: 50%;
+    float: left;
+}
+.col-md-8{
+    width: 66%;
+    float: left;
+}

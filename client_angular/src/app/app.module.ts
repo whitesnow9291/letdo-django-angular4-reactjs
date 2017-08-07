@@ -17,7 +17,7 @@ import { ContactComponent }   from './contactcomponent/contact.component';
 import { customHttpProvider } from './_helpers/index';
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
-import { AlertService, LetDoService, UserService } from './_services/index';
+import { AlertService, LetDoService } from './_services/index';
 import { EqualValidator } from './_directives/equaldirective';
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { EqualValidator } from './_directives/equaldirective';
         AuthGuard,
         AlertService,
         LetDoService,
-        UserService ],
+         ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

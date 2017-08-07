@@ -1,0 +1,67 @@
+{
+  "name": "suddi.github.io",
+  "private": true,
+  "description": "Sudharshan Ravindran personal site",
+  "version": "1.2.1",
+  "homepage": "https://suddi.github.io",
+  "author": {
+    "name": "Sudharshan Ravindran",
+    "email": "suddir@gmail.com",
+    "url": "https://suddi.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suddi/suddi.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/suddi/suddi.github.io/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://github.com/suddi/suddi.github.io/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 2.0.0"
+  },
+  "scripts": {
+    "bundle": "webpack -p --progress",
+    "deploy": "webpack -p --progress --config webpack.deploy.js",
+    "lint": "eslint .",
+    "prepush": "npm test",
+    "security-check": "nsp check --output summary",
+    "start": "webpack-dev-server --hot --inline",
+    "test": "npm run lint && npm run security-check"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.0.0",
+    "eslint": "^3.0.0",
+    "eslint-config-suddi": "^3.0.0",
+    "eslint-plugin-react": "^7.0.1",
+    "husky": "^0.13.0",
+    "moment": "^2.17.0",
+    "nsp": "^2.0.0",
+    "nuka-carousel": "^2.0.0",
+    "react": "^15.0.0",
+    "react-addons-css-transition-group": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-modal": "^1.0.0",
+    "react-router": "^3.0.0",
+    "superagent": "^3.0.0",
+    "webpack": "^2.0.0",
+    "webpack-dev-server": "^2.0.0",
+    "webpack-s3-plugin": "^0.9.0"
+  },
+  "eslintConfig": {
+    "extends": "suddi/frontend",
+    "rules": {
+      "react/no-deprecated": "off",
+      "react/no-array-index-key": "off"
+    }
+  }
+}
